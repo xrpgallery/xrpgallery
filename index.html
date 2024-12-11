@@ -6,40 +6,57 @@
     <title>XRP Gallery</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f9;
-            color: #333;
+            background: #121212; /* Dark background */
+            color: #FFFFFF; /* White text */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
         }
         h1 {
-            font-size: 2.5em;
-            color: #555;
+            font-size: 3em;
+            color: #00E676; /* Modern green accent color */
+            margin-bottom: 0.5em;
         }
         p {
             font-size: 1.2em;
             margin: 0.5em 0;
+            line-height: 1.6;
         }
         a {
             text-decoration: none;
-            color: #0077cc;
+            color: #2196F3; /* Blue accent for links */
             font-weight: bold;
         }
         a:hover {
-            color: #005fa3;
+            color: #64B5F6; /* Lighter blue on hover */
+        }
+        .button {
+            margin-top: 1em;
+            padding: 10px 20px;
+            background-color: #00E676; /* Green button */
+            color: #121212; /* Dark text for contrast */
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #66FFA6; /* Lighter green on hover */
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to XRP Gallery</h1>
+    <h1>Welcome to The XRP Gallery</h1>
     <p>Your hub for exclusive, small-run XRP NFT collections.</p>
-    <p>Follow us on Twitter: <a href="https://twitter.com/xrpgallery" target="_blank">@XRPGallery</a></p>
-    <p>Stay tuned for updates!</p>
+    <p>Follow us on X: <a href="https://x.com/xrpgallery" target="_blank">@XRPGallery</a></p>
+    <p>Stay tuned for updates! The first collections are coming soon.</p>
+    <button class="button" onclick="window.open('https://x.com/xrpgallery', '_blank')">Follow Us on X</button>
 </body>
 </html>
