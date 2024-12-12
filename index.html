@@ -6,51 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XRP Gallery</title>
     <style>
-        /* Reset and global styles */
+        /* Global Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #121212;
             color: #ffffff;
-            line-height: 1.6;
+            background: #000000;
         }
 
         header {
-            background: #1e1e1e;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1em 2em;
-            position: sticky;
-            top: 0;
             z-index: 1000;
         }
 
-        header a {
+        header img {
+            height: 50px;
+        }
+
+        header nav a {
             text-decoration: none;
             color: #00e676;
             font-weight: bold;
             margin: 0 1em;
         }
 
-        header a:hover {
+        header nav a:hover {
             color: #66ffa6;
         }
 
-        header .burger-menu {
-            display: none;
-        }
-
         main {
-            padding: 2em;
-            text-align: center;
+            margin-top: 80px; /* Leave space for the fixed header */
         }
 
         section {
-            padding: 4em 2em;
-            margin-bottom: 2em;
-            background: #1e1e1e;
-            border-radius: 8px;
+            position: relative;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        section#about {
+            background-image: url('images/section_1_bg.jpg');
+        }
+
+        section#collections {
+            background-image: url('images/section_2_bg.jpg');
+        }
+
+        section#community {
+            background-image: url('images/section_3_bg.jpg');
+        }
+
+        section#future {
+            background-image: url('images/section_4_bg.jpg');
+        }
+
+        section#contact {
+            background-image: url('images/section_5_bg.jpg');
+        }
+
+        section .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 800px;
         }
 
         h1, h2 {
@@ -69,7 +97,6 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
-            margin-top: 1em;
         }
 
         a.cta:hover {
@@ -77,10 +104,9 @@
         }
 
         footer {
-            background: #1e1e1e;
+            background: #121212;
             text-align: center;
             padding: 1em 0;
-            margin-top: 2em;
         }
 
         footer a {
@@ -94,65 +120,60 @@
             color: #777;
             font-size: 0.9em;
         }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-
-            header .burger-menu {
-                display: block;
-                cursor: pointer;
-            }
-
-            header nav {
-                display: none;
-                flex-direction: column;
-            }
-
-            header nav a {
-                margin: 0.5em 0;
-            }
-
-            header.nav-open nav {
-                display: flex;
-            }
-        }
     </style>
 </head>
 
 <body>
     <header>
-        <div id="logo">
-            <a href="#">XRP Gallery</a>
-        </div>
-        <div class="burger-menu" onclick="toggleMenu()">☰</div>
+        <img src="images/xrpgallery-logo.gif" alt="XRP Gallery Logo">
         <nav>
             <a href="#about">About</a>
             <a href="#collections">Collections</a>
             <a href="#community">Community</a>
+            <a href="#future">Future</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
         <section id="about">
-            <h1>Welcome to XRP Gallery</h1>
-            <p>Your hub for exclusive, small-run XRP NFT collections.</p>
-            <a class="cta" href="https://x.com/xrpgallery" target="_blank">Follow Us on X</a>
+            <div class="content">
+                <h1>Welcome to XRP Gallery</h1>
+                <p>Your hub for exclusive, small-run XRP NFT collections.</p>
+                <a class="cta" href="https://x.com/xrpgallery" target="_blank">Follow Us on X</a>
+            </div>
         </section>
 
         <section id="collections">
-            <h2>Our Collections</h2>
-            <p>Explore unique NFTs ranging from dinosaurs to sugar skulls, all created with passion and ADHD-driven creativity.</p>
-            <a class="cta" href="#about">Learn More</a>
+            <div class="content">
+                <h2>Our Collections</h2>
+                <p>Explore unique NFTs ranging from dinosaurs to sugar skulls, all created with passion and ADHD-driven creativity.</p>
+                <a class="cta" href="#about">Learn More</a>
+            </div>
         </section>
 
         <section id="community">
-            <h2>Community</h2>
-            <p>Join our growing community to discuss NFTs, share art, and stay updated on the latest drops.</p>
-            <a class="cta" href="https://discord.gg/example" target="_blank">Join Discord</a>
+            <div class="content">
+                <h2>Community</h2>
+                <p>Join our growing community to discuss NFTs, share art, and stay updated on the latest drops.</p>
+                <a class="cta" href="https://discord.gg/example" target="_blank">Join Discord</a>
+            </div>
+        </section>
+
+        <section id="future">
+            <div class="content">
+                <h2>The Future</h2>
+                <p>Exciting things are coming! Stay tuned for new collections, partnerships, and events.</p>
+                <a class="cta" href="#contact">Contact Us</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Have questions or want to collaborate? Reach out to us through our social channels.</p>
+                <a class="cta" href="mailto:example@example.com">Email Us</a>
+            </div>
         </section>
     </main>
 
@@ -162,13 +183,6 @@
         <a href="https://github.com/yourrepo" target="_blank">GitHub</a>
         <p>© 2023 XRP Gallery. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const header = document.querySelector('header');
-            header.classList.toggle('nav-open');
-        }
-    </script>
 </body>
 
 </html>
