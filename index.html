@@ -22,7 +22,6 @@
             width: 100%;
             background: rgba(0, 0, 0, 0.9);
             display: flex;
-            justify-content: flex-start;
             align-items: center;
             padding: 1em 2em;
             z-index: 1000;
@@ -41,15 +40,15 @@
         }
 
         main {
-            margin-top: 100px; /* Leave space for the fixed header */
+            margin-top: 80px; /* Leave space for the fixed header */
         }
 
         section {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 4em 2em;
-            min-height: 100vh;
+            padding: 2em 1em; /* Reduced padding */
+            min-height: 70vh; /* Reduced section height */
             transition: all 0.5s ease-in-out;
             opacity: 0;
             transform: translateY(50px);
