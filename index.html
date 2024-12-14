@@ -12,6 +12,7 @@
             font-family: 'Arial', sans-serif;
             color: #ffffff;
             background: #000000;
+            line-height: 1.6;
         }
 
         header {
@@ -20,7 +21,7 @@
             width: 100%;
             background: rgba(0, 0, 0, 0.8);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 1em 2em;
             z-index: 1000;
@@ -30,54 +31,26 @@
             height: 50px;
         }
 
-        header nav a {
-            text-decoration: none;
-            color: #00e676;
-            font-weight: bold;
-            margin: 0 1em;
-        }
-
-        header nav a:hover {
-            color: #66ffa6;
-        }
-
         main {
             margin-top: 80px; /* Leave space for the fixed header */
+            text-align: center;
         }
 
         section {
-            position: relative;
-            height: 100vh;
+            padding: 4em 2em;
+            text-align: center;
+        }
+
+        section#intro {
+            background-image: url('images/section_1_bg.jpg');
             background-size: cover;
             background-position: center;
-        }
-
-        section#about {
-            background-image: url('images/section_1_bg.jpg');
-        }
-
-        section#collections {
-            background-image: url('images/section_2_bg.jpg');
+            color: #00e676;
         }
 
         section#xrpgems {
             background: #1e1e1e;
             color: #ffffff;
-            padding: 4em 2em;
-            text-align: center;
-        }
-
-        section#future {
-            background-image: url('images/section_4_bg.jpg');
-        }
-
-        section .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            max-width: 800px;
         }
 
         h1, h2 {
@@ -88,25 +61,10 @@
             margin: 1em 0;
         }
 
-        a.cta {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #00e676;
-            color: #121212;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-
-        a.cta:hover {
-            background: #66ffa6;
-        }
-
-        img.animated-gif {
+        img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-top: 20px;
+            margin-top: 1em;
         }
 
         footer {
@@ -116,7 +74,6 @@
         }
 
         footer p {
-            margin: 0.5em 0 0;
             color: #777;
             font-size: 0.9em;
         }
@@ -126,44 +83,26 @@
 <body>
     <header>
         <img src="images/xrpgallery-logo.gif" alt="XRP Gallery Logo">
-        <nav>
-            <a href="#about">About</a>
-            <a href="#collections">Collections</a>
-            <a href="#xrpgems">XRP Gems</a>
-            <a href="#future">Future</a>
-        </nav>
     </header>
 
     <main>
-        <section id="about">
-            <div class="content">
-                <h1>Welcome to XRP Gallery</h1>
-                <p>Your hub for exclusive, small-run XRP NFT collections.</p>
-                <a class="cta" href="https://x.com/xrpgallery" target="_blank">Follow Us on X</a>
-            </div>
+        <!-- Intro Section -->
+        <section id="intro">
+            <h1>Welcome to XRP Gallery</h1>
+            <p>Showcasing unique, small-run NFT collections on the XRP Ledger.</p>
         </section>
 
-        <section id="collections">
-            <div class="content">
-                <h2>Our Collections</h2>
-                <p>Explore unique NFTs ranging from dinosaurs to sugar skulls, all created with passion and ADHD-driven creativity.</p>
-                <a class="cta" href="#about">Learn More</a>
-            </div>
-        </section>
-
+        <!-- XRP Gems Section -->
         <section id="xrpgems">
             <h2>XRP Gems</h2>
             <p>The **XRP Gems** collection is nearly complete! This stunning animated series showcases the rare beauty of digital gems on the XRP Ledger. Stay tuned for the drop!</p>
-            <img src="images/xrpgifs.gif" alt="XRP Gems Animated Showcase" class="animated-gif">
-            <a class="cta" href="#about">Coming Soon</a>
+            <img src="images/xrpgifs.gif" alt="XRP Gems Animated Showcase">
         </section>
 
-        <section id="future">
-            <div class="content">
-                <h2>The Future</h2>
-                <p>Exciting things are coming! Stay tuned for new collections, partnerships, and events.</p>
-                <a class="cta" href="#about">Learn More</a>
-            </div>
+        <!-- Upcoming Projects Section -->
+        <section id="upcoming">
+            <h2>More Projects Coming Soon</h2>
+            <p>We’re constantly creating new, exciting collections. Follow us to stay updated!</p>
         </section>
     </main>
 
