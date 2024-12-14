@@ -29,152 +29,42 @@
         }
 
         header img {
-            height: 50px;
+            height: 80px;
         }
 
         main {
-            margin-top: 80px; /* Leave space for the fixed header */
+            margin-top: 100px; /* Leave space for the fixed header */
         }
 
         section {
-            padding: 4em 2em;
-            text-align: center;
-            opacity: 0; /* Initially hidden for animation */
-            transform: translateY(50px);
-            transition: all 0.5s ease-in-out;
-        }
-
-        section.active {
-            opacity: 1; /* Fade in when active */
-            transform: translateY(0);
-        }
-
-        h1, h2 {
-            color: #ffd700; /* Gold highlights */
-        }
-
-        p {
-            color: #ffffff;
-            margin: 1em 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 1em;
-        }
-
-        footer {
-            background: #121212;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        footer p {
-            color: #777;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <img src="images/xrpgallery-logo.gif" alt="XRP Gallery Logo">
-    </header>
-
-    <main>
-        <!-- Intro Section -->
-        <section id="intro">
-            <h1>Welcome to XRP Gallery</h1>
-            <p>Showcasing unique, small-run NFT collections on the XRP Ledger.</p>
-        </section>
-
-        <!-- XRP Gems Section -->
-        <section id="xrpgems">
-            <h2>XRP Gems</h2>
-            <p>The **XRP Gems** collection is nearly complete! This stunning animated series showcases the rare beauty of digital gems on the XRP Ledger. Stay tuned for the drop!</p>
-            <img src="images/xrpgifs.gif" alt="XRP Gems Animated Showcase">
-        </section>
-
-        <!-- Upcoming Projects Section -->
-        <section id="upcoming">
-            <h2>More Projects Coming Soon</h2>
-            <p>We’re constantly creating new, exciting collections. Follow us to stay updated!</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2023 XRP Gallery. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // Function to handle scroll animations
-        const sections = document.querySelectorAll('section');
-
-        const handleScroll = () => {
-            const scrollPosition = window.innerHeight + window.scrollY;
-            sections.forEach(section => {
-                if (scrollPosition > section.offsetTop + 50) {
-                    section.classList.add('active');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', handleScroll);
-    </script>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XRP Gallery</title>
-    <style>
-        /* Global Styles */
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            color: #ffffff;
-            background: #000000;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 1em 2em;
-            z-index: 1000;
-        }
-
-        header img {
-            height: 50px;
-        }
-
-        main {
-            margin-top: 80px; /* Leave space for the fixed header */
-        }
-
-        section {
+            justify-content: center;
             padding: 4em 2em;
-            text-align: center;
-            opacity: 0; /* Initially hidden for animation */
-            transform: translateY(50px);
+            min-height: 100vh;
             transition: all 0.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(50px);
         }
 
         section.active {
-            opacity: 1; /* Fade in when active */
+            opacity: 1;
             transform: translateY(0);
+        }
+
+        section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .content {
+            max-width: 50%;
+            text-align: center;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
         }
 
         h1, h2 {
@@ -182,14 +72,7 @@
         }
 
         p {
-            color: #ffffff;
             margin: 1em 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 1em;
         }
 
         footer {
@@ -201,6 +84,7 @@
         footer p {
             color: #777;
             font-size: 0.9em;
+            margin: 0;
         }
     </style>
 </head>
@@ -213,21 +97,37 @@
     <main>
         <!-- Intro Section -->
         <section id="intro">
-            <h1>Welcome to XRP Gallery</h1>
-            <p>Showcasing unique, small-run NFT collections on the XRP Ledger.</p>
+            <img src="images/xrpgallery-logo.gif" alt="XRP Gallery Logo" style="max-width: 80%; margin-right: 2em;">
+            <div class="content">
+                <h1>Welcome to XRP Gallery</h1>
+                <p>Showcasing unique, small-run NFT collections on the XRP Ledger.</p>
+            </div>
         </section>
 
         <!-- XRP Gems Section -->
         <section id="xrpgems">
-            <h2>XRP Gems</h2>
-            <p>The **XRP Gems** collection is nearly complete! This stunning animated series showcases the rare beauty of digital gems on the XRP Ledger. Stay tuned for the drop!</p>
             <img src="images/xrpgifs.gif" alt="XRP Gems Animated Showcase">
+            <div class="content">
+                <h2>XRP Gems</h2>
+                <p>The XRP Gems collection is nearly complete! This stunning animated series showcases the rare beauty of digital gems on the XRP Ledger. Stay tuned for the drop!</p>
+            </div>
+        </section>
+
+        <!-- Punk Ass Punks Section -->
+        <section id="punkass">
+            <img src="images/punkass.gif" alt="Punk Ass Punks Animated Showcase">
+            <div class="content">
+                <h2>Punk Ass Punks</h2>
+                <p>The Punk Ass Punks collection is coming soon! Get ready for bold, rebellious NFTs that will turn heads and shake up the XRP Ledger.</p>
+            </div>
         </section>
 
         <!-- Upcoming Projects Section -->
         <section id="upcoming">
-            <h2>More Projects Coming Soon</h2>
-            <p>We’re constantly creating new, exciting collections. Follow us to stay updated!</p>
+            <div class="content">
+                <h2>More Projects Coming Soon</h2>
+                <p>We’re constantly creating new, exciting collections. Follow us to stay updated!</p>
+            </div>
         </section>
     </main>
 
