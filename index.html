@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             background-color: #f7c74d; /* Yellow background */
             color: #000;
+            overflow-x: hidden;
         }
         /* Top Navigation Bar */
         .navbar {
@@ -43,6 +44,7 @@
             background: url('images/gemsbackground.png') no-repeat center center;
             background-size: cover;
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             padding: 60px 20px;
@@ -96,6 +98,20 @@
         }
         .cta:hover {
             background-color: #333;
+        }
+        /* Responsive Layout for Mobile */
+        @media (max-width: 768px) {
+            .gems-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .gems-section .gems-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .gems-section .text-content {
+                text-align: center;
+            }
         }
         /* Video Section */
         .video-section {
