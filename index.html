@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f7c74d; /* Yellow background matching the Gems image */
+            background-color: #f7c74d; /* Yellow background */
             color: #000;
         }
         /* Top Navigation Bar */
@@ -24,42 +24,36 @@
             align-items: center;
             padding: 0 20px;
             box-sizing: border-box;
+            z-index: 1000;
         }
         .navbar img {
             height: 40px;
         }
         .content {
-            margin-top: 50px; /* Adjust to fit under navbar */
+            margin-top: 50px; /* Space under navbar */
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 0;
         }
-        .top-banner img {
+        /* Gems Section with Background */
+        .gems-section {
+            position: relative;
             width: 100%;
-            max-width: 1200px;
-            height: auto;
-        }
-        .top-section {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 1000px;
-            flex-direction: column;
-        }
-        .top-section .text {
+            background: url('images/gemsbackground.png') no-repeat center center;
+            background-size: cover;
             text-align: center;
-            margin-top: 20px;
+            padding: 60px 20px;
+            box-sizing: border-box;
         }
-        .top-section .text h1 {
+        .gems-section h1 {
             font-size: 2.5rem;
-            margin: 10px 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .top-section .text p {
+        .gems-section p {
             font-size: 1.2rem;
-            margin: 10px 0;
+            color: #fff;
         }
         .cta {
             display: inline-block;
@@ -70,16 +64,24 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 10px;
             transition: background-color 0.3s;
         }
         .cta:hover {
             background-color: #333;
         }
-        video {
+        /* Video Section */
+        .video-section {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            padding: 20px 0;
+        }
+        .video-section video {
+            width: 90%;
             max-width: 800px;
-            margin: 20px auto;
-            display: block;
+            border: 5px solid #ffcc00;
             border-radius: 10px;
         }
         footer {
@@ -101,24 +103,16 @@
         <a href="#"><img src="images/xrpgallery-logo.png" alt="XRP Gallery Logo"></a>
     </div>
 
-    <!-- Main Content -->
-    <div class="content">
-        <!-- Top Banner -->
-        <div class="top-banner">
-            <img src="images/gemsbanner.png" alt="Gems Banner">
-        </div>
+    <!-- Gems Section with Background -->
+    <div class="gems-section">
+        <h1>Embrace the Adventure</h1>
+        <p>200 resplendent cyclopean gems are waiting. Own a piece of the first XRP Gallery collection.</p>
+        <a href="https://xrp.cafe/collection/gems" class="cta">Mint Now on XRP Café</a>
+    </div>
 
-        <!-- Top Section: Text and CTA -->
-        <div class="top-section">
-            <div class="text">
-                <h1>Embrace the Adventure</h1>
-                <p>200 resplendent cyclopean gems are waiting. Own a piece of the first XRP Gallery collection.</p>
-                <a href="https://xrp.cafe/collection/gems" class="cta">Mint Now on XRP Café</a>
-            </div>
-        </div>
-        
-        <!-- Video Section -->
-        <video controls>
+    <!-- Video Section -->
+    <div class="video-section">
+        <video autoplay loop muted playsinline>
             <source src="images/gems-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
