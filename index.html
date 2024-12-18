@@ -29,31 +29,33 @@
             height: 40px;
         }
         .content {
-            margin-top: 70px;
+            margin-top: 50px; /* Adjust to fit under navbar */
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
         }
-        .top-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .top-banner img {
             width: 100%;
-            max-width: 1000px;
-        }
-        .top-section img {
-            max-width: 300px;
+            max-width: 1200px;
             height: auto;
         }
+        .top-section {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+            flex-direction: column;
+        }
         .top-section .text {
-            max-width: 600px;
-            padding: 10px;
-            text-align: left;
+            text-align: center;
+            margin-top: 20px;
         }
         .top-section .text h1 {
             font-size: 2.5rem;
-            margin: 0;
+            margin: 10px 0;
         }
         .top-section .text p {
             font-size: 1.2rem;
@@ -76,7 +78,8 @@
         video {
             width: 100%;
             max-width: 800px;
-            margin: 20px 0;
+            margin: 20px auto;
+            display: block;
             border-radius: 10px;
         }
         footer {
@@ -100,9 +103,13 @@
 
     <!-- Main Content -->
     <div class="content">
-        <!-- Top Section: Gems Image and Text -->
+        <!-- Top Banner -->
+        <div class="top-banner">
+            <img src="images/gemsbanner.png" alt="Gems Banner">
+        </div>
+
+        <!-- Top Section: Text and CTA -->
         <div class="top-section">
-            <img src="images/gemsbanner.png" alt="Gems Image">
             <div class="text">
                 <h1>Embrace the Adventure</h1>
                 <p>200 resplendent cyclopean gems are waiting. Own a piece of the first XRP Gallery collection.</p>
