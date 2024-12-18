@@ -9,68 +9,102 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: #f7c74d; /* Yellow background matching the Gems image */
+            color: #000;
             text-align: center;
         }
-        .container {
-            padding: 40px 20px;
+        /* Top Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .navbar img {
+            height: 40px;
+        }
+        .content {
+            margin-top: 70px; /* Space for the fixed navbar */
+        }
+        h1, h2, p {
+            margin: 10px auto;
         }
         h1 {
             font-size: 3rem;
-            margin: 0;
-            letter-spacing: 2px;
-        }
-        h2 {
-            margin: 10px 0;
-            font-size: 2rem;
-            font-weight: 400;
-        }
-        p {
-            margin: 20px 0;
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        .highlight {
-            color: #ffcc00;
-            font-weight: bold;
-            font-size: 1.5rem;
             margin-top: 20px;
         }
         .cta {
             display: inline-block;
-            background-color: #ffcc00;
-            color: #000;
+            background-color: #000;
+            color: #ffcc00;
             font-size: 1.2rem;
             font-weight: bold;
             padding: 15px 30px;
-            margin-top: 20px;
+            margin: 20px auto;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
         .cta:hover {
-            background-color: #e6b800;
+            background-color: #333;
+        }
+        video {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px 0;
+            border: 5px solid #000;
+            border-radius: 10px;
+        }
+        img.gems-image {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            display: block;
         }
         footer {
             margin-top: 40px;
+            padding: 10px 0;
             font-size: 0.9rem;
+            color: #000;
+        }
+        footer a {
+            color: #000;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Embrace the Adventure</h1>
-        <h2>GEMS GEMS</h2>
-        <p>200 NFTS Available on <br><strong>XRP.CAFE/gems</strong></p>
-        <div class="highlight">Minting Now - 5 XRP Each</div>
-        <p>8 - 1 of 1's</p>
-        <p><em>The First XRP Gallery Collection</em></p>
-        <a href="https://xrp.cafe/gems" class="cta">Mint Now on XRP Café</a>
+    <!-- Top Navigation Bar -->
+    <div class="navbar">
+        <a href="#"><img src="xrpgallery-logo.png" alt="XRP Gallery Logo"></a>
     </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Embrace the Adventure</h1>
+        <h2>GEMS ARE MINTING NOW</h2>
+        <a href="https://xrp.cafe/collection/gems" class="cta">Mint Now on XRP Café</a>
+        
+        <!-- Video Section -->
+        <video controls>
+            <source src="Embrace the Adventure.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Gems Image Section -->
+        <img src="MINTING NOW.png" alt="Gems Image" class="gems-image">
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>More collections coming soon | <a href="https://www.xrpgallery.art" style="color: #ffcc00; text-decoration: none;">www.xrpgallery.art</a></p>
-        <p>Follow us on Twitter: <a href="https://twitter.com/xrpgallery" style="color: #ffcc00; text-decoration: none;">@xrpgallery</a></p>
+        <p>More collections coming soon | <a href="https://www.xrpgallery.art">www.xrpgallery.art</a></p>
+        <p>Follow us on Twitter: <a href="https://twitter.com/xrpgallery">@xrpgallery</a></p>
     </footer>
 </body>
 </html>
