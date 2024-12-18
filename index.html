@@ -57,13 +57,14 @@
         }
         .gems-section .text-content {
             max-width: 600px;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #0276bf;
             text-align: left;
         }
         .gems-section h1 {
             font-size: 3rem;
             margin: 0 0 10px 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .gems-section h2 {
             font-size: 1.5rem;
@@ -78,7 +79,7 @@
         }
         .gems-section li::before {
             content: "\2022";
-            color: #fff;
+            color: #0276bf;
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -121,9 +122,10 @@
             text-align: center;
         }
         .about-section p {
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin: 10px auto;
             max-width: 800px;
+            line-height: 1.6;
         }
         footer {
             margin-top: 40px;
@@ -135,6 +137,15 @@
         footer a {
             color: #000;
             text-decoration: underline;
+        }
+        .footer-logo {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .footer-logo img {
+            width: 80px;
+            height: auto;
         }
     </style>
 </head>
@@ -162,12 +173,18 @@
 
     <!-- About Section -->
     <div class="about-section">
-        <p>Welcome to the XRP Gallery, a collection of small-run NFT collections on the XRP network. Created by an overcaffeinated illustrator with ADHD and nothing better to do. 1 collection released so far, many more to come.</p>
+        <p>Welcome to the <strong>XRP Gallery</strong>, a collection of <em>small-run NFT collections</em> on the XRP network.<br>
+        Created by an overcaffeinated illustrator with ADHD and nothing better to do.<br>
+        <strong>1 collection released so far, many more to come.</strong></p>
     </div>
 
     <!-- Footer -->
     <footer>
+        <p>More collections coming soon | <a href="https://www.xrpgallery.art">www.xrpgallery.art</a></p>
         <p>Follow us on Twitter: <a href="https://twitter.com/xrpgallery">@xrpgallery</a></p>
+        <div class="footer-logo">
+            <img src="images/xrpgallery-logo.png" alt="Medium XRP Gallery Logo">
+        </div>
     </footer>
 </body>
 </html>
