@@ -42,27 +42,35 @@
             width: 100%;
             background: url('images/gemsbackground.png') no-repeat center center;
             background-size: cover;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 60px 20px;
             box-sizing: border-box;
         }
+        .gems-section .gems-image {
+            width: 300px;
+            height: auto;
+            margin-right: 30px;
+        }
+        .gems-section .text-content {
+            max-width: 600px;
+            color: #fff;
+            text-align: left;
+        }
         .gems-section h1 {
             font-size: 3rem;
-            color: #fff;
+            margin: 0 0 10px 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .gems-section h2 {
             font-size: 1.5rem;
-            color: #fff;
             margin-top: -10px;
         }
         .gems-section ul {
             list-style: none;
             padding: 0;
-            margin: 20px auto;
-            text-align: left;
-            max-width: 600px;
-            color: #fff;
+            margin: 20px 0;
             font-size: 1.2rem;
             line-height: 1.5;
         }
@@ -124,15 +132,18 @@
 
     <!-- Gems Section with Background -->
     <div class="gems-section">
-        <h1>GEMS on XRPL</h1>
-        <h2>Minting Now</h2>
-        <ul>
-            <li>200 resplendent GEMS</li>
-            <li>Featuring over 220 hand-drawn elements</li>
-            <li>No AI, 100% original art</li>
-            <li>8 individual 1 of 1 GEMS hidden in the collection</li>
-        </ul>
-        <a href="https://xrp.cafe/collection/gems" class="cta">Mint Now on XRP Café</a>
+        <img src="images/GEMS.png" alt="GEMS Image" class="gems-image">
+        <div class="text-content">
+            <h1>GEMS on XRPL</h1>
+            <h2>Minting Now</h2>
+            <ul>
+                <li>200 resplendent GEMS</li>
+                <li>Featuring over 220 hand-drawn elements</li>
+                <li>No AI, 100% original art</li>
+                <li>8 individual 1 of 1 GEMS hidden in the collection</li>
+            </ul>
+            <a href="https://xrp.cafe/collection/gems" class="cta">Mint Now on XRP Café</a>
+        </div>
     </div>
 
     <!-- Video Section -->
