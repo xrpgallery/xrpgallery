@@ -57,7 +57,8 @@
         }
         .gems-section .text-content {
             max-width: 600px;
-            color: #0276bf;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             text-align: left;
         }
         .gems-section h1 {
@@ -77,7 +78,7 @@
         }
         .gems-section li::before {
             content: "\2022";
-            color: #0276bf;
+            color: #fff;
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -112,19 +113,17 @@
                 text-align: center;
             }
         }
-        /* Video Section */
-        .video-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
+        /* About Section */
+        .about-section {
             background-color: #000;
-            padding: 20px 0;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
-        .video-section video {
-            width: 90%;
+        .about-section p {
+            font-size: 1rem;
+            margin: 10px auto;
             max-width: 800px;
-            border: 5px solid #ffcc00;
-            border-radius: 10px;
         }
         footer {
             margin-top: 40px;
@@ -161,17 +160,13 @@
         </div>
     </div>
 
-    <!-- Video Section -->
-    <div class="video-section">
-        <video autoplay loop muted playsinline controls>
-            <source src="videos/gems-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- About Section -->
+    <div class="about-section">
+        <p>Welcome to the XRP Gallery, a collection of small-run NFT collections on the XRP network. Created by an overcaffeinated illustrator with ADHD and nothing better to do. 1 collection released so far, many more to come.</p>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>More collections coming soon | <a href="https://www.xrpgallery.art">www.xrpgallery.art</a></p>
         <p>Follow us on Twitter: <a href="https://twitter.com/xrpgallery">@xrpgallery</a></p>
     </footer>
 </body>
