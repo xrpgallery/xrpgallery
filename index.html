@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
             background-color: #f7c74d; /* Yellow background matching the Gems image */
             color: #000;
-            text-align: center;
         }
         /* Top Navigation Bar */
         .navbar {
@@ -30,23 +29,43 @@
             height: 40px;
         }
         .content {
-            margin-top: 70px; /* Space for the fixed navbar */
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
-        h1, h2, p {
-            margin: 10px auto;
+        .top-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
         }
-        h1 {
-            font-size: 3rem;
-            margin-top: 20px;
+        .top-section img {
+            max-width: 300px;
+            height: auto;
+        }
+        .top-section .text {
+            max-width: 600px;
+            padding: 10px;
+            text-align: left;
+        }
+        .top-section .text h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .top-section .text p {
+            font-size: 1.2rem;
+            margin: 10px 0;
         }
         .cta {
             display: inline-block;
             background-color: #000;
             color: #ffcc00;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: bold;
-            padding: 15px 30px;
-            margin: 20px auto;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
@@ -55,23 +74,17 @@
             background-color: #333;
         }
         video {
-            width: 90%;
+            width: 100%;
             max-width: 800px;
             margin: 20px 0;
-            border: 5px solid #000;
             border-radius: 10px;
-        }
-        img.gems-image {
-            width: 90%;
-            max-width: 1000px;
-            margin: 20px auto;
-            display: block;
         }
         footer {
             margin-top: 40px;
             padding: 10px 0;
             font-size: 0.9rem;
             color: #000;
+            text-align: center;
         }
         footer a {
             color: #000;
@@ -87,18 +100,21 @@
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Embrace the Adventure</h1>
-        <h2>GEMS ARE MINTING NOW</h2>
-        <a href="https://xrp.cafe/collection/gems" class="cta">Mint Now on XRP Café</a>
+        <!-- Top Section: Gems Image and Text -->
+        <div class="top-section">
+            <img src="MINTING NOW.png" alt="Gems Image">
+            <div class="text">
+                <h1>Embrace the Adventure</h1>
+                <p>200 resplendent cyclopean gems are waiting. Own a piece of the first XRP Gallery collection.</p>
+                <a href="https://xrp.cafe/collection/gems" class="cta">Mint Now on XRP Café</a>
+            </div>
+        </div>
         
         <!-- Video Section -->
         <video controls>
             <source src="Embrace the Adventure.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
-        <!-- Gems Image Section -->
-        <img src="MINTING NOW.png" alt="Gems Image" class="gems-image">
     </div>
 
     <!-- Footer -->
