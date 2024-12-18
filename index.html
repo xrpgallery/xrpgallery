@@ -1,184 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XRP Gallery</title>
+    <title>Embrace the Adventure | XRP Gallery</title>
     <style>
-        /* Global Styles */
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            color: #ffffff;
-            background: #000000;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: flex;
-            align-items: center;
-            padding: 1em 2em;
-            z-index: 1000;
-        }
-
-        header img {
-            height: 40px;
-            margin-right: 1em;
-        }
-
-        header h1 {
-            font-size: 1.5em;
-            color: #ffd700; /* Gold highlight */
-            margin: 0;
-            font-weight: bold;
-        }
-
-        main {
-            margin-top: 80px; /* Leave space for the fixed header */
-        }
-
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2em 1em;
-            min-height: 70vh; /* Reduced height for less blank space */
-            transition: all 0.5s ease-in-out;
-            opacity: 0;
-            transform: translateY(50px);
-        }
-
-        section.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        section:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .content {
-            max-width: 50%;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
             text-align: center;
         }
-
-        img {
-            max-width: 50%;
-            height: auto;
-            border-radius: 8px;
+        .container {
+            padding: 40px 20px;
         }
-
-        h1, h2 {
-            color: #ffd700; /* Gold highlights */
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
         }
-
+        h2 {
+            margin: 10px 0;
+            font-size: 2rem;
+            font-weight: 400;
+        }
         p {
-            margin: 1em 0;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
-
-        ul {
-            text-align: left;
-            margin: 1em 0;
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 20px;
         }
-
-        ul li {
-            margin-bottom: 0.5em;
+        .cta {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-
+        .cta:hover {
+            background-color: #e6b800;
+        }
         footer {
-            background: #121212;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        footer p {
-            color: #777;
-            font-size: 0.9em;
-            margin: 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <img src="images/xrpgallery-logo.gif" alt="XRP Gallery Logo">
-        <h1>XRP Gallery</h1>
-    </header>
-
-    <main>
-        <!-- Intro Section -->
-        <section id="intro">
-            <div class="content">
-                <h1>Welcome to XRP Gallery</h1>
-                <p>Your destination for exclusive, small-run NFT collections on the XRP Ledger. The collections are not quite ready yet, I am currently working on putting the finishing touches on the first 3 projects. Stay tuned. </p>
-            </div>
-        </section>
-
-        <!-- XRP Gems Section -->
-        <section id="xrpgems">
-            <img src="images/xrpgifs.gif" alt="XRP Gems Animated Showcase">
-            <div class="content">
-                <h2>XRP Gems</h2>
-                <p>Digital Treasures on the XRP Ledger</p>
-                <p>Get ready to dazzle! The XRP Gems collection is a nearly complete animated series that captures the brilliance of rare, digital gems. Each gem is meticulously crafted to shine on the XRP Ledger—a treasure for collectors who value beauty and exclusivity. Stay tuned for the drop—you don’t want to miss this sparkle!</p>
-            </div>
-        </section>
-
-        <!-- Punk Ass Punks Section -->
-        <section id="punkass">
-            <img src="images/punkass.gif" alt="Punk Ass Punks Animated Showcase">
-            <div class="content">
-                <h2>Punk Ass Punks</h2>
-                <p>Rebellious. Bold. Unapologetic.</p>
-                <p>Introducing Punk Ass Punks, an upcoming collection of edgy, rebellious NFTs designed to turn heads and disrupt the XRP NFT scene. Every Punk has attitude, style, and a story to tell. These aren’t just collectibles; they’re a statement. Keep an eye out for the launch—it’s going to be punk-tastic.</p>
-            </div>
-        </section>
-
-        <!-- Why Small Collections Section -->
-        <section id="small-collections">
-            <div class="content">
-                <h2>Why Small Collections?</h2>
-                <p>At XRP Gallery, we believe in quality over quantity. Instead of one massive collection of 10,000 items, we prefer 50 smaller collections of 200 pieces each. This approach keeps things exclusive, exciting, and manageable for collectors who want something truly special.</p>
-                <p>Each collection tells its own unique story, offering a diverse and ever-evolving experience for NFT enthusiasts. Small runs, big impact—this is what sets XRP Gallery apart.</p>
-            </div>
-        </section>
-
-        <!-- Upcoming Projects Section -->
-        <section id="upcoming">
-            <div class="content">
-                <h2>What’s Next?</h2>
-                <p>Creativity Never Sleeps</p>
-                <p>We’re constantly cooking up new collections that push the boundaries of digital art and design. From whimsical creatures to sophisticated art series, there’s always something exciting in the pipeline. Follow us on Twitter to stay in the loop and be the first to know about new drops.</p>
-            </div>
-        </section>
-    </main>
-
+    <div class="container">
+        <h1>Embrace the Adventure</h1>
+        <h2>GEMS GEMS</h2>
+        <p>200 NFTS Available on <br><strong>XRP.CAFE/gems</strong></p>
+        <div class="highlight">Minting Now - 5 XRP Each</div>
+        <p>8 - 1 of 1's</p>
+        <p><em>The First XRP Gallery Collection</em></p>
+        <a href="https://xrp.cafe/gems" class="cta">Mint Now on XRP Café</a>
+    </div>
     <footer>
-        <p>© 2023 XRP Gallery. All Rights Reserved.</p>
+        <p>More collections coming soon | <a href="https://www.xrpgallery.art" style="color: #ffcc00; text-decoration: none;">www.xrpgallery.art</a></p>
+        <p>Follow us on Twitter: <a href="https://twitter.com/xrpgallery" style="color: #ffcc00; text-decoration: none;">@xrpgallery</a></p>
     </footer>
-
-    <script>
-        // Function to handle scroll animations
-        const sections = document.querySelectorAll('section');
-
-        const handleScroll = () => {
-            const scrollPosition = window.innerHeight + window.scrollY;
-            sections.forEach(section => {
-                if (scrollPosition > section.offsetTop + 50) {
-                    section.classList.add('active');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', handleScroll);
-    </script>
 </body>
-
 </html>
