@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEMS on XRPL | XRP Gallery</title>
+    <title>GEMS & XRPCOPY | XRP Gallery</title>
     <style>
         body {
             margin: 0;
@@ -13,7 +13,6 @@
             color: #000;
             overflow-x: hidden;
         }
-        /* Top Navigation Bar */
         .navbar {
             position: fixed;
             top: 0;
@@ -31,7 +30,7 @@
             height: 40px;
         }
         .content {
-            margin-top: 50px; /* Space under navbar */
+            margin-top: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -60,30 +59,11 @@
             color: #0276bf;
             text-align: left;
         }
-        .gems-section h1 {
+        .gems-section h1, .xrpcopy-section h1 {
             font-size: 3rem;
             margin: 0 0 10px 0;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .gems-section h2 {
-            font-size: 1.5rem;
-            margin-top: -10px;
-        }
-        .gems-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
-        .gems-section li::before {
-            content: "\2022";
-            color: #0276bf;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
         }
         .cta {
             display: inline-block;
@@ -100,62 +80,33 @@
         .cta:hover {
             background-color: #333;
         }
-        /* Responsive Layout for Mobile */
+        /* XRPCOPY Section */
+        .xrpcopy-section {
+            background-color: #000;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .xrpcopy-section video {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        /* Responsive */
         @media (max-width: 768px) {
-            .gems-section {
+            .gems-section, .xrpcopy-section {
                 flex-direction: column;
                 text-align: center;
             }
-            .gems-section .gems-image {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-            .gems-section .text-content {
-                text-align: center;
-            }
-        }
-        /* About Section */
-        .about-section {
-            background-color: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .about-section p {
-            font-size: 1.2rem;
-            margin: 10px auto;
-            max-width: 800px;
-            line-height: 1.6;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 10px 0;
-            font-size: 0.9rem;
-            color: #000;
-            text-align: center;
-        }
-        footer a {
-            color: #000;
-            text-decoration: underline;
-        }
-        .footer-logo {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .footer-logo img {
-            width: 80px;
-            height: auto;
         }
     </style>
 </head>
 <body>
-    <!-- Top Navigation Bar -->
     <div class="navbar">
         <a href="#"><img src="images/xrpgallery-logo.png" alt="XRP Gallery Logo"></a>
     </div>
 
-    <!-- Gems Section with Background -->
     <div class="gems-section">
         <img src="images/GEMS.png" alt="GEMS Image" class="gems-image">
         <div class="text-content">
@@ -171,14 +122,17 @@
         </div>
     </div>
 
-    <!-- About Section -->
-    <div class="about-section">
-        <p>Welcome to the <strong>XRP Gallery</strong>, a collection of <em>small-run NFT collections</em> on the XRP network.<br>
-        Created by an overcaffeinated illustrator with ADHD and nothing better to do.<br>
-        <strong>1 collection released so far, many more to come.</strong></p>
+    <div class="xrpcopy-section">
+        <h1>XRPCOPY</h1>
+        <p>50 glitchy GIFs on the XRP blockchain. With individual names and unusual rarities. A lo-fi, derivative homage.</p>
+        <video controls>
+            <source src="MINTING_NOW.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <a href="https://xrp.cafe/collection/xrpcopy" class="cta">View Collection on XRP Café</a>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>More collections coming soon | <a href="https://www.xrpgallery.art">www.xrpgallery.art</a></p>
         <p>Follow us on Twitter: <a href="https://twitter.com/xrpgallery">@xrpgallery</a></p>
